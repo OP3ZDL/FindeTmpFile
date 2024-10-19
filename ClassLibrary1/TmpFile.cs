@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,13 @@ namespace ClassLibrary1
         {
             Name = name;
             Path = path;
+        }
+        public bool CreateF()
+        { 
+           string PN = Path + Name;
+           File.Create(PN);
+           return File.Exists(PN);
+
         }
     }
 }
